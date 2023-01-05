@@ -1,5 +1,7 @@
 package com.github.brynnexvii.demomod;
 
+import com.github.brynnexvii.demomod.init.BlockInit;
+import com.github.brynnexvii.demomod.init.ItemInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -45,15 +47,16 @@ public class DemoMod
 
     public DemoMod()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+        bus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
-        ITEMS.register(modEventBus);
+        BlockInit.BLOCKS.register(bus);
+        
+        // Register the Deferred Register to the mod event bus so our items get registered
+        ItemInit.ITEMS.register(bus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
