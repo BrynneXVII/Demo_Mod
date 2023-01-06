@@ -1,3 +1,5 @@
 {
-	"item.demomod.example_item": "Example Item"
+	"item.demomod.example_item": "Example Item",
+	
+	"block.demomod.example_block": "Example Block"
 }

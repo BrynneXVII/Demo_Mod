@@ -2,6 +2,7 @@ package com.github.brynnexvii.demomod.init;
 
 import com.github.brynnexvii.demomod.DemoMod;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -17,7 +18,7 @@ public class ItemInit {
 	
 	//registry objects = what we want to 
 	public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-
+	
 	
 	//Dye item set up
 	//Material colours seem to map to a range of 64 types, all of which are defined by minecraft

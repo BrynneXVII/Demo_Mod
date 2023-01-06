@@ -1,0 +1,7 @@
+{
+	"variants":{
+		"":{
+			"model": "demomod:block/example_block"
+		}
+	}
+}
