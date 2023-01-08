@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -61,6 +62,13 @@ public class DemoMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
+    
+    public static final CreativeModeTab EXAMPLE_TAB = new CreativeModeTab(MODID) {
+    	@Override
+    	public ItemStack makeIcon() {
+    		return ItemInit.EXAMPLE_ITEM.get().getDefaultInstance();
+    	}
+    };
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {

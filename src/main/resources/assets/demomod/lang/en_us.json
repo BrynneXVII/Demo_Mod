@@ -1,5 +1,13 @@
 {
 	"item.demomod.example_item": "Example Item",
+	"item.demomod.example_food": "Example Food",
 	
-	"block.demomod.example_block": "Example Block"
+	"item.demomod.example_sword": "Example Sword",
+	"item.demomod.example_pickaxe": "Example Pickaxe",
+	
+	
+	"block.demomod.example_block": "Example Block",
+	
+	
+	"itemGroup.demomod": "Demo Tab"
 }

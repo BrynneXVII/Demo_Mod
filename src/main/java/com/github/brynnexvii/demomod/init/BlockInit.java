@@ -4,7 +4,6 @@ import com.github.brynnexvii.demomod.DemoMod;
 import com.google.common.base.Supplier;
 
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -26,7 +25,9 @@ public class BlockInit {
 	}
 	
 	//Registry items for the blocks
-	public static final RegistryObject<Block> EXAMPLE_BLOCK = register("example_block", 
-		() -> new Block(BlockBehaviour.Properties.of(Material.FROGLIGHT).strength(2f).requiresCorrectToolForDrops()), 
-		new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS));
+	public static final RegistryObject<Block> EXAMPLE_BLOCK = register("example_block", () -> new Block(BlockBehaviour.Properties
+			.of(Material.FROGLIGHT)
+			.strength(2f)
+			.requiresCorrectToolForDrops()), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
 }
