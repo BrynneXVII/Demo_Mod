@@ -3,6 +3,9 @@ package com.github.brynnexvii.demomod.init;
 import com.github.brynnexvii.demomod.DemoMod;
 import com.google.common.base.Supplier;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -30,4 +33,17 @@ public class BlockInit {
 			.strength(2f)
 			.requiresCorrectToolForDrops()), 
 			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	
+	//Subclass for a block tags
+	public static class ModBlockTags {
+		//method to simplify tag creation
+		private static TagKey<Block> create(String location){
+			return BlockTags.create(new ResourceLocation(DemoMod.MODID, location));
+		}
+		
+		
+		public static final TagKey<Block> NEEDS_EXAMPLE_TOOL = ModBlockTags.create("needs_example_tool");
+		
+		
+	}
 }
