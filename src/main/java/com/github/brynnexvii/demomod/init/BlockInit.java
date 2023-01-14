@@ -1,16 +1,22 @@
 package com.github.brynnexvii.demomod.init;
 
+import java.util.function.Supplier;
 import com.github.brynnexvii.demomod.DemoMod;
-import com.google.common.base.Supplier;
+import com.github.brynnexvii.demomod.base.RuneBlock;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.GlowLichenBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -27,12 +33,38 @@ public class BlockInit {
 		return block;
 	}
 	
+	//Registry method for burnable block items
+	private static <T extends Block> RegistryObject<T> registerBurnable(String name, Supplier<T> supplier, Item.Properties properties, int burnTime){
+		RegistryObject<T> block = BLOCKS.register(name, supplier);
+		ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), properties) {
+				
+			@Override
+			public int getBurnTime(ItemStack itemStack, RecipeType<?> recipeType) {
+				return burnTime;
+			}
+		});
+		return block;
+	}
+	
 	//Registry items for the blocks
 	public static final RegistryObject<Block> EXAMPLE_BLOCK = register("example_block", () -> new Block(BlockBehaviour.Properties
 			.of(Material.FROGLIGHT)
 			.strength(2f)
 			.requiresCorrectToolForDrops()), 
 			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<Block> EXAMPLE_FUEL_BLOCK = registerBurnable("example_fuel_block", () -> new Block(BlockBehaviour.Properties
+			.of(Material.STONE)
+			.strength(1f)
+			.requiresCorrectToolForDrops()), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB), 1000);
+	public static final RegistryObject<Block> EXAMPLE_RUNE = register("example_rune", () -> new RuneBlock(BlockBehaviour.Properties
+			.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_RED)
+			.noCollission()
+			.strength(0.2F)
+			.sound(SoundType.GLOW_LICHEN)
+			.lightLevel(RuneBlock.emission(15))), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+		
 	
 	//Subclass for a block tags
 	public static class ModBlockTags {
@@ -44,6 +76,7 @@ public class BlockInit {
 		
 		public static final TagKey<Block> NEEDS_EXAMPLE_TOOL = ModBlockTags.create("needs_example_tool");
 		
-		
 	}
+	
+	
 }

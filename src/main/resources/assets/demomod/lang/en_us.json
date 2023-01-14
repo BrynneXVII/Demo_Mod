@@ -9,6 +9,8 @@
 	
 	
 	"block.demomod.example_block": "Example Block",
+	"block.demomod.example_fuel_block": "Example Fuel Block",
+	"block.demomod.example_rune": "Example Rune",
 	
 	
 	"itemGroup.demomod": "Demo Tab"

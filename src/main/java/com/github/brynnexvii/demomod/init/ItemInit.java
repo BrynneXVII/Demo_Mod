@@ -1,6 +1,7 @@
 package com.github.brynnexvii.demomod.init;
 
 import com.github.brynnexvii.demomod.DemoMod;
+import com.github.brynnexvii.demomod.base.FuelItem;
 import com.github.brynnexvii.demomod.base.ModArmorMaterial;
 
 import net.minecraft.resources.ResourceLocation;
@@ -16,7 +17,6 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
@@ -41,12 +41,7 @@ public class ItemInit {
 
 	// registry objects = what we want to
 	public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(baseProps()));
-	public static final RegistryObject<Item> EXAMPLE_FUEL = ITEMS.register("example_fuel", () -> new Item(baseProps()) {
-		@Override
-		public int getBurnTime(ItemStack itemStack, RecipeType<?> recipeType) {
-			return 100;
-		};
-	});
+	public static final RegistryObject<Item> EXAMPLE_FUEL = ITEMS.register("example_fuel", () -> new FuelItem(baseProps(), 500));
 
 	// food property class (for builder setup)
 	public static class Foods {
