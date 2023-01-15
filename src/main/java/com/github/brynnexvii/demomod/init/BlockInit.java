@@ -52,6 +52,11 @@ public class BlockInit {
 			.strength(2f)
 			.requiresCorrectToolForDrops()), 
 			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<Block> EXAMPLE_ANIMATED_BLOCK = register("example_animated_block", () -> new Block(BlockBehaviour.Properties
+			.of(Material.STONE)
+			.strength(2f)
+			.requiresCorrectToolForDrops()), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
 	public static final RegistryObject<Block> EXAMPLE_FUEL_BLOCK = registerBurnable("example_fuel_block", () -> new Block(BlockBehaviour.Properties
 			.of(Material.STONE)
 			.strength(1f)

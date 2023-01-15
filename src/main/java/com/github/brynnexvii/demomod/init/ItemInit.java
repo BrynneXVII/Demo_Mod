@@ -41,6 +41,7 @@ public class ItemInit {
 
 	// registry objects = what we want to
 	public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(baseProps()));
+	public static final RegistryObject<Item> EXAMPLE_ANIMATED_ITEM = ITEMS.register("example_animated_item", () -> new Item(baseProps()));
 	public static final RegistryObject<Item> EXAMPLE_FUEL = ITEMS.register("example_fuel", () -> new FuelItem(baseProps(), 500));
 
 	// food property class (for builder setup)

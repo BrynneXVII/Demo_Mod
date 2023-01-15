@@ -1,5 +1,6 @@
 {
 	"item.demomod.example_item": "Example Item",
+	"item.demomod.example_animated_item": "Example Animated Item",
 	"item.demomod.example_food": "Example Food",
 	"item.demomod.example_fuel": "Example Fuel",
 	
@@ -9,6 +10,7 @@
 	
 	
 	"block.demomod.example_block": "Example Block",
+	"block.demomod.example_animated_block": "Example Animated Block",
 	"block.demomod.example_fuel_block": "Example Fuel Block",
 	"block.demomod.example_rune": "Example Rune",
 	
