@@ -7,11 +7,16 @@ import com.github.brynnexvii.demomod.base.RuneBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.GlowLichenBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -69,7 +74,15 @@ public class BlockInit {
 			.sound(SoundType.GLOW_LICHEN)
 			.lightLevel(RuneBlock.emission(15))), 
 			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
-		
+	public static final RegistryObject<FlowerBlock> EXAMPLE_FLOWER = register("example_flower", () -> new FlowerBlock(
+			MobEffects.HEALTH_BOOST, 
+			10, 
+			BlockBehaviour.Properties.copy(Blocks.LILY_OF_THE_VALLEY)),
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<FlowerPotBlock> POTTED_EXAMPLE_FLOWER = BLOCKS.register("potted_example_flower", () -> new FlowerPotBlock(
+			() -> (FlowerPotBlock) Blocks.FLOWER_POT,
+			EXAMPLE_FLOWER, 
+			BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
 	
 	//Subclass for a block tags
 	public static class ModBlockTags {

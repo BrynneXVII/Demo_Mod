@@ -1,0 +1,8 @@
+{
+	"mod_comment": "block model file",
+	"parent": "minecraft:block/flower_pot_cross",
+	"render_type": "cutout",
+	"textures": {
+		"plant": "demomod:blocks/example_flower"
+	}
+}

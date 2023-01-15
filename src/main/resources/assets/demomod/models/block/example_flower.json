@@ -1,0 +1,8 @@
+{
+	"mod_comment": "block model file",
+	"parent": "minecraft:block/cross",
+	"render_type": "cutout",
+	"textures": {
+		"cross": "demomod:blocks/example_flower"
+	}
+}

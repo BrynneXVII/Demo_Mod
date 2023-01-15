@@ -14,6 +14,8 @@
 	"block.demomod.example_animated_block": "Example Animated Block",
 	"block.demomod.example_fuel_block": "Example Fuel Block",
 	"block.demomod.example_rune": "Example Rune",
+	"block.demomod.example_flower": "Example Flower",
+	"block.demomod.potted_example_flower": "Potted Example Flower",
 	
 	
 	"itemGroup.demomod": "Demo Tab"

@@ -2,7 +2,7 @@
 	"mod_comment": "blockstate file",
 	"variants":{
 		"":{
-			"model": "demomod:block/example_block"
+			"model": "demomod:block/potted_example_flower"
 		}
 	}
 }

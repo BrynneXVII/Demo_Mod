@@ -1,0 +1,7 @@
+{
+	"mod_comment": "block item model file",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "demomod:blocks/example_flower"
+	}
+}

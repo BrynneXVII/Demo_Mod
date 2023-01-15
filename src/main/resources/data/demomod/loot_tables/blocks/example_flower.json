@@ -1,0 +1,22 @@
+{
+	"mod_comment": "loot table file",
+	
+  	"type": "minecraft:block",
+  	"pools": [
+    	{
+      		"rolls": 1,
+      		"bonus_rolls": 0,
+      		"entries": [
+        		{
+          			"type": "minecraft:item",
+          			"name": "demomod:example_flower"
+        		}
+      		],
+      		"conditions": [
+        		{
+					"condition": "minecraft:survives_explosion"
+        		}
+      		]
+    	}
+  	]	
+}

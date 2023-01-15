@@ -1,0 +1,8 @@
+{
+	"mod_comment": "block state file",
+	"variants":{
+		"":{
+			"model": "demomod:block/example_flower"
+		}
+	}
+}
