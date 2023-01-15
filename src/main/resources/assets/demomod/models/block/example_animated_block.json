@@ -1,4 +1,5 @@
 {
+	"comment": "block model file",
 	"parent": "minecraft:block/cube_all",
 	"textures": {
 		"all": "demomod:blocks/example_animated_block"

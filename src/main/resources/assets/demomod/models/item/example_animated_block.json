@@ -1,3 +1,4 @@
 {
+	"comment": "block item model file",
 	"parent": "demomod:block/example_animated_block"
 }
