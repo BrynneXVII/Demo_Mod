@@ -2,6 +2,7 @@ package com.github.brynnexvii.demomod;
 
 import com.github.brynnexvii.demomod.init.BlockInit;
 import com.github.brynnexvii.demomod.init.ItemInit;
+import com.github.brynnexvii.demomod.init.PaintingInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -49,6 +50,9 @@ public class DemoMod
         
         // Register the Deferred Register to the mod event bus so our items get registered
         ItemInit.ITEMS.register(bus);
+        
+        // Register the Deferred Register to the mod event bus so our paintings get registered
+        PaintingInit.PAINTINGS.register(bus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
