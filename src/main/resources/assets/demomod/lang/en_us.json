@@ -4,6 +4,8 @@
 	"item.demomod.example_food": "Example Food",
 	"item.demomod.example_fuel": "Example Fuel",
 	"item.demomod.example_dye": "Example Dye",
+	"item.demomod.example_advanced_item": "Example Advanced Item",
+	
 	
 	"item.demomod.example_sword": "Example Sword",
 	"item.demomod.example_pickaxe": "Example Pickaxe",
@@ -16,6 +18,12 @@
 	"block.demomod.example_rune": "Example Rune",
 	"block.demomod.example_flower": "Example Flower",
 	"block.demomod.potted_example_flower": "Potted Example Flower",
+	
+	
+	"demomod.advanced_item.right_click": "Advanced Item Used",
+	"demomod.advanced_item.tooltip": "This is the advanced item type tooltip.",
+	"demomod.example_advanced_item.tooltip": "This is the example instance tooltip",
+	"demomod.example_advanced_item.expanded_tooltip": "Hear it roar! *squeak*",
 	
 	
 	"itemGroup.demomod": "Demo Tab"

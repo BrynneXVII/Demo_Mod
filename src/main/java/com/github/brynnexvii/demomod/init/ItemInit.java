@@ -4,6 +4,7 @@ import com.github.brynnexvii.demomod.DemoMod;
 import com.github.brynnexvii.demomod.base.FuelItem;
 import com.github.brynnexvii.demomod.base.ModArmorMaterial;
 import com.github.brynnexvii.demomod.base.ModDyeItem;
+import com.github.brynnexvii.demomod.items.AdvancedItem;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -45,6 +46,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> EXAMPLE_ANIMATED_ITEM = ITEMS.register("example_animated_item", () -> new Item(baseProps()));
 	public static final RegistryObject<Item> EXAMPLE_FUEL = ITEMS.register("example_fuel", () -> new FuelItem(baseProps(), 500));
 	public static final RegistryObject<Item> EXAMPLE_DYE = ITEMS.register("example_dye", () -> new ModDyeItem(DyeColor.BLUE,baseProps()));
+	public static final RegistryObject<AdvancedItem> EXAMPLE_ADVANCED_ITEM = ITEMS.register("example_advanced_item", () -> new AdvancedItem(baseProps()));
 	
 	// food property class (for builder setup)
 	public static class Foods {
