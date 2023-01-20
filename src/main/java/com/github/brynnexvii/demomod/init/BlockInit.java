@@ -3,6 +3,7 @@ package com.github.brynnexvii.demomod.init;
 import java.util.function.Supplier;
 import com.github.brynnexvii.demomod.DemoMod;
 import com.github.brynnexvii.demomod.base.RuneBlock;
+import com.github.brynnexvii.demomod.blocks.AdvancedBlock;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -83,6 +84,10 @@ public class BlockInit {
 			() -> (FlowerPotBlock) Blocks.FLOWER_POT,
 			EXAMPLE_FLOWER, 
 			BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
+	public static final RegistryObject<AdvancedBlock> EXAMPLE_ADVANCED_BLOCK = register("example_advanced_block", () -> new AdvancedBlock(
+			BlockBehaviour.Properties.copy(Blocks.BEACON)
+			.randomTicks()), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
 	
 	//Subclass for a block tags
 	public static class ModBlockTags {

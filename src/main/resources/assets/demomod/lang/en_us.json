@@ -18,6 +18,7 @@
 	"block.demomod.example_rune": "Example Rune",
 	"block.demomod.example_flower": "Example Flower",
 	"block.demomod.potted_example_flower": "Potted Example Flower",
+	"block.demomod.example_advanced_block": "Example Advanced Block",
 	
 	
 	"demomod.advanced_item.right_click": "Advanced Item Used",
