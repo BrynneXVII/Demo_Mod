@@ -19,6 +19,10 @@
 	"block.demomod.example_flower": "Example Flower",
 	"block.demomod.potted_example_flower": "Potted Example Flower",
 	"block.demomod.example_advanced_block": "Example Advanced Block",
+	"block.demomod.example_overworld_ore": "Example Overworld Ore",
+	"block.demomod.example_deepslate_ore": "Example Deepslate Ore",
+	"block.demomod.example_nether_ore": "Example Nether Ore",
+	"block.demomod.example_end_ore": "Example End Ore",
 	
 	
 	"demomod.advanced_item.right_click": "Advanced Item Used",

@@ -89,6 +89,20 @@ public class BlockInit {
 			.randomTicks()), 
 			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
 	
+	//ore registry items
+	public static final RegistryObject<Block> EXAMPLE_OVERWORLD_ORE = register("example_overworld_ore", () -> new Block(BlockBehaviour.Properties
+			.copy(Blocks.DIAMOND_ORE)), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<Block> EXAMPLE_DEEPSLATE_ORE = register("example_deepslate_ore", () -> new Block(BlockBehaviour.Properties
+			.copy(Blocks.DEEPSLATE_DIAMOND_ORE)), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<Block> EXAMPLE_NETHER_ORE = register("example_nether_ore", () -> new Block(BlockBehaviour.Properties
+			.copy(Blocks.ANCIENT_DEBRIS)), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<Block> EXAMPLE_END_ORE = register("example_end_ore", () -> new Block(BlockBehaviour.Properties
+			.copy(Blocks.END_STONE)), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	
 	//Subclass for a block tags
 	public static class ModBlockTags {
 		//method to simplify tag creation
