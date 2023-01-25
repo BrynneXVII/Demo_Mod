@@ -47,6 +47,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> EXAMPLE_FUEL = ITEMS.register("example_fuel", () -> new FuelItem(baseProps(), 500));
 	public static final RegistryObject<Item> EXAMPLE_DYE = ITEMS.register("example_dye", () -> new ModDyeItem(DyeColor.BLUE,baseProps()));
 	public static final RegistryObject<AdvancedItem> EXAMPLE_ADVANCED_ITEM = ITEMS.register("example_advanced_item", () -> new AdvancedItem(baseProps()));
+	public static final RegistryObject<Item> EXAMPLE_CUSTOM_MODEL_ITEM = ITEMS.register("example_custom_model_item", () -> new Item(baseProps()));
 	
 	// food property class (for builder setup)
 	public static class Foods {

@@ -2,6 +2,7 @@ package com.github.brynnexvii.demomod;
 
 import com.github.brynnexvii.demomod.init.BlockInit;
 import com.github.brynnexvii.demomod.init.ConfiguredFeatureInit;
+import com.github.brynnexvii.demomod.init.FluidInit;
 import com.github.brynnexvii.demomod.init.ItemInit;
 import com.github.brynnexvii.demomod.init.PaintingInit;
 import com.github.brynnexvii.demomod.init.PlacedFeatureInit;
@@ -44,6 +45,12 @@ public class DemoMod
         
         // Register the Deferred Register to the mod event bus so our placed features (ore vein structures) get registered
         PlacedFeatureInit.PLACED_FEATURES.register(bus);
+        
+        // Register the Deferred Register to the mod event bus so our fluid types get registered
+        FluidInit.FLUID_TYPES.register(bus);
+        
+        // Register the Deferred Register to the mod event bus so our fluids get registered
+        FluidInit.FLUIDS.register(bus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

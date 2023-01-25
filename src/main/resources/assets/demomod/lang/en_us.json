@@ -5,6 +5,8 @@
 	"item.demomod.example_fuel": "Example Fuel",
 	"item.demomod.example_dye": "Example Dye",
 	"item.demomod.example_advanced_item": "Example Advanced Item",
+	"item.demomod.example_custom_model_item": "Example Custom Model Item",
+	"item.demomod.example_fluid_bucket": "Bucket of Example Fluid",
 	
 	
 	"item.demomod.example_sword": "Example Sword",
@@ -23,6 +25,7 @@
 	"block.demomod.example_deepslate_ore": "Example Deepslate Ore",
 	"block.demomod.example_nether_ore": "Example Nether Ore",
 	"block.demomod.example_end_ore": "Example End Ore",
+	"block.demomod.example_custom_model_block": "Example Custom Model Block",
 	
 	
 	"demomod.advanced_item.right_click": "Advanced Item Used",
