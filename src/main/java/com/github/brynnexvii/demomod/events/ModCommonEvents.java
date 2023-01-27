@@ -1,10 +1,13 @@
 package com.github.brynnexvii.demomod.events;
 
 import com.github.brynnexvii.demomod.DemoMod;
+import com.github.brynnexvii.demomod.entities.ExampleEntityClass;
 import com.github.brynnexvii.demomod.init.BlockInit;
+import com.github.brynnexvii.demomod.init.EntityInit;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -19,5 +22,10 @@ public class ModCommonEvents {
 		event.enqueueWork(() -> {
 			((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockInit.EXAMPLE_FLOWER.getId(), BlockInit.POTTED_EXAMPLE_FLOWER);
 		});
+	}
+	
+	@SubscribeEvent
+	public static void entityAttributes(EntityAttributeCreationEvent event) {
+		event.put(EntityInit.EXAMPLE_ENTITY.get(), ExampleEntityClass.getExampleEnitityAttributes().build());
 	}
 }
