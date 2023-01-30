@@ -1,0 +1,8 @@
+{
+	"mod_comment": "blockstate file",
+	"variants":{
+		"":{
+			"model": "demomod:block/example_table"
+		}
+	}
+}

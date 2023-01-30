@@ -25,6 +25,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -107,13 +108,9 @@ public class ItemInit {
 		public static final TagKey<Item> FOX_FOOD = ModItemTags.createMinecraft("fox_food");
 	}
 
-	// Dye item set up
-	// Material colours seem to map to a range of 64 types, all of which are defined
-	// by minecraft
-	// public static final DyeColor ELECTRIC_INDIGO = new DyeColor(17,
-	// "electric_indigo", 0, MaterialColor.COLOR_PURPLE, 0, 7274751);
-
-	// public static final RegistryObject<Item> EXAMPLE_DYE =
-	// ITEMS.register("example_dye", () -> new DyeItem(null, null));
+	
+	//spawn eggs
+	public static final RegistryObject<ForgeSpawnEggItem> EXAMPLE_ENTITY_SPAWN_EGG = ITEMS.register("example_entity_spawn_egg", 
+			() -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0x4D2600, 0xFEEECD, baseProps().stacksTo(16)));
 
 }

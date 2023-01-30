@@ -1,5 +1,6 @@
 package com.github.brynnexvii.demomod;
 
+import com.github.brynnexvii.demomod.init.BlockEntityInit;
 import com.github.brynnexvii.demomod.init.BlockInit;
 import com.github.brynnexvii.demomod.init.ConfiguredFeatureInit;
 import com.github.brynnexvii.demomod.init.EntityInit;
@@ -55,6 +56,9 @@ public class DemoMod
         
         // Register the Deferred Register to the mod event bus so our entities get registered
         EntityInit.ENTITY_TYPES.register(bus);
+        
+        // Register the Deferred Register to the mod event bus so our block entities get registered
+        BlockEntityInit.BLOCK_ENTITIES.register(bus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

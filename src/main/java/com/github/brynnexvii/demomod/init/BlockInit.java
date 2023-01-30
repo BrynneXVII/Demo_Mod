@@ -5,6 +5,7 @@ import com.github.brynnexvii.demomod.DemoMod;
 import com.github.brynnexvii.demomod.base.RuneBlock;
 import com.github.brynnexvii.demomod.blocks.AdvancedBlock;
 import com.github.brynnexvii.demomod.blocks.CustomModelBlock;
+import com.github.brynnexvii.demomod.blocks.ExampleTable;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -91,6 +92,10 @@ public class BlockInit {
 			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
 	public static final RegistryObject<Block> EXAMPLE_CUSTOM_MODEL_BLOCK = register("example_custom_model_block", () -> new CustomModelBlock(
 			BlockBehaviour.Properties.of(Material.WOOD).dynamicShape().noOcclusion()), new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	public static final RegistryObject<ExampleTable> EXAMPLE_TABLE = register("example_table", () -> new ExampleTable(
+			BlockBehaviour.Properties.of(Material.WOOD).dynamicShape().requiresCorrectToolForDrops().strength(5f)), 
+			new Item.Properties().tab(DemoMod.EXAMPLE_TAB));
+	
 	
 	//ore registry items
 	public static final RegistryObject<Block> EXAMPLE_OVERWORLD_ORE = register("example_overworld_ore", () -> new Block(BlockBehaviour.Properties

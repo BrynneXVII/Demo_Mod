@@ -1,0 +1,13 @@
+{
+	"type": "forge:add_spawns",
+	"biomes": [
+		"minecraft:plains",
+		"minecraft:taiga"
+	],
+	"spawners": {
+		"type": "demomod:example_entity",
+		"weight": 100,
+		"minCount": 1,
+		"maxCount": 3
+	}
+}
